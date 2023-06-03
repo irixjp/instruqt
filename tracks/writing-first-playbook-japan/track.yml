@@ -1,0 +1,39 @@
+slug: writing-first-playbook-japan
+id: al0jpefygypc
+title: 初めての Playbook 作成
+teaser: Ansible Playbook を作成して単純なインフラストラクチャータスクを自動化する方法の基本について学びます。
+description: |-
+  Ansible は、アプリケーションのデプロイ、設定管理、およびオーケストレーションのためのシンプルかつ強力な IT 自動化エンジンであり、すぐに習得できます。この演習では、Ansible を使用して Red Hat Enterprise Linux 上に Apache Web サーバーを構築する方法について説明します。
+
+  ![ラボの図](https://ansible.github.io/workshops/images/rhel_lab_diagram.png)
+
+  この演習では、以下の Ansible の基本について説明します。
+
+  * Ansible モジュールパラメーターについて
+  * 以下のモジュールの概要および使用
+    * ansible.builtin.package モジュール
+    * ansible.builtin.service モジュール
+    * ansible.builtin.copy モジュール
+  * 冪等性と、Ansible モジュールが冪等性になる方法を理解する
+
+  Ansible の詳細は、[Ansible.com](https://www.ansible.com/)を参照してください。
+
+  [**今すぐ Ansible Automation Platform を試す**](https://red.ht/try_ansible)
+icon: https://www.ansible.com/hubfs/Logo-Red_Hat-Ansible-A-Reverse-SVG.svg
+level: beginner
+tags:
+- ansible
+- infrastructure
+- gettingstarted
+owner: redhat
+developers:
+- tnakajim@redhat.com
+- moshah@redhat.com
+- rlopez@redhat.com
+- lgallego@redhat.com
+show_timer: true
+lab_config:
+  overlay: false
+  width: 25
+  position: right
+checksum: "8468129911079644177"

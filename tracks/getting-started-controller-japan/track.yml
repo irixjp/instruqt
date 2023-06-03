@@ -1,0 +1,41 @@
+slug: getting-started-controller-japan
+id: io4z4furyagv
+title: Automation controller の概要
+teaser: このトラックでは、 Automation controller インターフェイスについて説明し、いくつかの基本的なタスクを実行します。
+description: |-
+  <img src="https://raw.githubusercontent.com/craig-br/instruqt-tracks/devel/assets/logos/Logo-Red_Hat-Ansible_Automation_Platform-A-Standard-RGB.png" alt="図" style=";width:400px"/>
+  <br>
+
+  # Automation controller
+  * * *
+  <br>
+
+  [**Automation controller**](https://docs.ansible.com/automation-controller/latest/html/administration/index.html)は、これまで [Ansible Tower](https://www.ansible.com/products/tower)と呼ばれ、Red Hat Ansible Automation Platform のユーザーは、企業全体で自動化を定義、運用、スケーリング、委譲できます。
+
+
+  一元化されたユーザーインターフェイスと REST API から、インベントリーの管理、ワークフローの開始とスケジュール設定、変更の追跡、外部システムへの統合をすべて実行できます。
+  <br>
+
+  このトラックでは:
+
+  * **automation controller** インターフェイスについて理解する
+  * 標準インベントリーを作成してホストを追加する
+  * インベントリーでジョブテンプレートを使用して自動化を実行する
+icon: https://raw.githubusercontent.com/craig-br/instruqt-tracks/devel/assets/icons/automation_controller.png
+level: beginner
+tags:
+- RedHat
+- Ansible
+- Ansible Automation Platform
+- ' controller'
+- ' automation controller'
+owner: redhat
+developers:
+- cbrandt@redhat.com
+- seanc@redhat.com
+show_timer: true
+lab_config:
+  overlay: false
+  width: 33
+  position: right
+checksum: "14256668610057626631"
