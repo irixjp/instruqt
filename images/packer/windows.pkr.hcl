@@ -15,7 +15,7 @@ source "googlecompute" "windows" {
     winrm_insecure	= true
     winrm_use_ssl	= true
     metadata = {
-   	 windows-startup-script-cmd = "winrm quickconfig -quiet & net user /add packer_user & net localgroup administrators packer_user /add & winrm set winrm/config/service/auth @{Basic=\"true\"}"
+   	 windows-startup-script-cmd = "winrm quickconfig -quiet & net user /add windows & net localgroup administrators windows /add & winrm set winrm/config/service/auth @{Basic=\"true\"}"
     }
 }
 
@@ -36,5 +36,12 @@ build {
 	"-e ansible_winrm_server_cert_validation=ignore",
       ]
     }
+# This runs sysprep and waits until it's finished. Added this in order to 
+# make one windows server join another's domain but some errors on instruqt
+# start after making this change that I don't understand
+#     provisioner "powershell" {
+#       inline = ["C:\\Windows\\System32\\Sysprep\\Sysprep.exe /oobe /generalize /quiet /quit", "while($true) { $imageState = Get-ItemProperty HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Setup\\State | Select ImageState; if($imageState.ImageState -ne 'IMAGE_STATE_GENERALIZE_RESEAL_TO_OOBE') { Write-Output $imageState.ImageState; Start-Sleep -s 10  } else { break } }"]
+#     }
+
 
 }
