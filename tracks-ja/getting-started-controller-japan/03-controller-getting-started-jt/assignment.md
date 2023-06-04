@@ -6,13 +6,12 @@ title: Using job templates
 teaser: In this challenge, we'll run automation using a Job Template
 notes:
 - type: text
-  contents: "# ジョブテンプレートを使用した自動化の実行\n<br>\n<p align=\"center\">\n
-    \ <img width=\"700px\" src=\"https://raw.githubusercontent.com/craig-br/instruqt-tracks/devel/assets/controller/controller_jt.png\">\n</p>\n<br>\n\n[**ジョブ
+  contents: "# ジョブテンプレートを使用した自動化の実行\n<br>\n<p align=\"center\">\n  <img width=\"700px\"
+    src=\"https://raw.githubusercontent.com/craig-br/instruqt-tracks/devel/assets/controller/controller_jt.png\">\n</p>\n<br>\n\n[**ジョブ
     テンプレート **](https://docs.ansible.com/automation-controller/latest/html/userguide/job_templates.html)
-    は、Ansible Playbook を実行するための定義およびパラメーターのセットです。\\n\\n
-    コントローラーでは、ジョブテンプレートとは `ansible-playbook`
-    コマンドと、コマンドラインから実行するときに使用できるすべてのフラグを視覚的に表したものです。\n\n
-    <style type=\"text/css\" rel=\"stylesheet\">\nh1 {\n\ttext-align: center\n}\n</style>"
+    は、Ansible Playbook を実行するための定義およびパラメーターのセットです。\\n\\n コントローラーでは、ジョブテンプレートとは `ansible-playbook`
+    コマンドと、コマンドラインから実行するときに使用できるすべてのフラグを視覚的に表したものです。\n\n <style type=\"text/css\" rel=\"stylesheet\">\nh1
+    {\n\ttext-align: center\n}\n</style>"
 tabs:
 - title: コントローラーダッシュボード
   type: service

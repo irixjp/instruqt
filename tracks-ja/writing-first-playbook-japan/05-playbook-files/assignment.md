@@ -86,7 +86,7 @@ curl http://node1
 ```
 <body>
     <h1>Apache is running fine, thanks to Ansible!</h1>
-    </body>
+</body>
 ```
 
 ✅ 次の課題

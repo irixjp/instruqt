@@ -12,7 +12,7 @@ ansible-navigator:
   execution-environment:
     container-engine: podman
     enabled: true
-    image: quay.io/acme_corp/servicenow-ee:latest
+    image: docker.io/irixjp/aap-23-custom-ee-base-supported-rhel8:latest
     pull:
       policy: missing
   logging:

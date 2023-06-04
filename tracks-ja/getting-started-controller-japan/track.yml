@@ -33,9 +33,10 @@ owner: redhat
 developers:
 - cbrandt@redhat.com
 - seanc@redhat.com
+- tnakajim@redhat.com
 show_timer: true
 lab_config:
   overlay: false
   width: 33
   position: right
-checksum: "14256668610057626631"
+checksum: "2210151509043941488"

@@ -131,7 +131,7 @@ curl http://node1
 ```
 <body>
     <h1>This is a production webserver, take care!</h1>
-    </body>
+</body>
 ```
 
 ```
@@ -141,7 +141,7 @@ curl http://node2
 ```
 <body>
     <h1>This is a development webserver, have fun!</h1>
-    </body>
+</body>
 ```
 
 ✅ 次の課題

@@ -32,8 +32,11 @@ developers:
 - rlopez@redhat.com
 - lgallego@redhat.com
 show_timer: true
+idle_timeout: 600
+timelimit: 3300
 lab_config:
   overlay: false
   width: 25
   position: right
-checksum: "8468129911079644177"
+  extend_ttl: 3300
+checksum: "6604015453344363062"

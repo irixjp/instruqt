@@ -80,7 +80,7 @@ roles/
         └── main.yml
 ```
 
-☑️ Task 3 - Edit the tasks/main.yml file
+☑️ Task 3 - tasks/main.yml ファイルを編集
 ===
 
 以前は、すべてのタスクを Ansible Playbook 自体に含めていました。Ansible Roles では、`tasks/main.yml` ファイル内にタスクを含めます。このファイルにはタスクのみが含まれており、完全な Playbook ではありません。
