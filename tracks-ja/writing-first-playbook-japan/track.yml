@@ -33,7 +33,7 @@ developers:
 - lgallego@redhat.com
 show_timer: true
 idle_timeout: 600
-timelimit: 3300
+timelimit: 3600
 lab_config:
   overlay: false
   width: 25
