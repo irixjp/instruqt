@@ -1,0 +1,24 @@
+slug: access-and-operation-check-japan
+id: z1vhrr1o1bul
+title: Instruqt 動作確認用トラック
+teaser: Instruqt を用いた Ansible ハンズオンの動作確認用トラックです
+description: |-
+  本トラックでハンズオン環境の動作確認を行う事が可能です。
+
+  ![ansible demo logo](https://raw.githubusercontent.com/ansible/instruqt/devel/assets/ansible-demo.png)
+icon: ""
+level: beginner
+tags:
+- ansible
+- gettingstarted
+owner: redhat
+developers:
+- tnakajim@redhat.com
+show_timer: true
+idle_timeout: 300
+timelimit: 600
+lab_config:
+  overlay: false
+  width: 25
+  position: right
+checksum: "3437354660852482533"
