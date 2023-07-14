@@ -6,7 +6,10 @@ title: ダッシュボードとコンソールの操作の確認
 teaser: 本トラックで Instruqt を使ったハンズオン環境の動作を確認することが可能です。
 notes:
 - type: text
-  contents: Instruqt を使ったハンズオンでは Web ブラウザのみで様々な演習が可能です。
+  contents: |
+    Instruqt を使ったハンズオンでは Web ブラウザのみで様々なAnsible演習が可能です。
+
+    環境が起動すると右下に「Start」ボタンが表示されます。
 tabs:
 - title: Controller Dashboard
   type: service
@@ -26,6 +29,8 @@ timelimit: 600
 ☑️ AAP ダッシュボードの動作確認
 ===
 演習画面の左上部のタブから `Controller Dashboard` を選択します（デフォルトで選択されているはずです）
+
+* ダッシュボードが表示されるまで少し時間がかかる場合があります。
 
 Red Hat Ansible Automation Platform のログイン画面が表示されますので、以下の情報でログインしてください。
 
@@ -59,6 +64,7 @@ Red Hat Ansible Automation Platform のログイン画面が表示されます�
 ファイルを保存したら、`Controller CLI` タブへ移動し、コマンドからファイルの中身を確認してください。
 
 ```
+cd rhel
 cat test.txt
 ```
 

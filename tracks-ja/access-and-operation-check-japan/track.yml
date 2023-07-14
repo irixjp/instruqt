@@ -1,7 +1,7 @@
 slug: access-and-operation-check-japan
 id: z1vhrr1o1bul
 title: Instruqt 動作確認用トラック
-teaser: Instruqt を用いた Ansible ハンズオンの動作確認用トラックです
+teaser: Instruqt を用いた Ansible ハンズオンの動作確認用トラックです 右下の「Launch」をクリックすると環境が起動します。
 description: |-
   本トラックでハンズオン環境の動作確認を行う事が可能です。
 
@@ -21,4 +21,4 @@ lab_config:
   overlay: false
   width: 25
   position: right
-checksum: "3437354660852482533"
+checksum: "8400920128500819166"
