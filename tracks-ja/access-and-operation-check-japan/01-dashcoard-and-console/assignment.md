@@ -26,6 +26,8 @@ tabs:
 difficulty: basic
 timelimit: 600
 ---
+以下の手順に従い、演習環境の動作確認を行ってください。
+
 ☑️ AAP ダッシュボードの動作確認
 ===
 演習画面の左上部のタブから `Controller Dashboard` を選択します（デフォルトで選択されているはずです）
@@ -47,7 +49,7 @@ Red Hat Ansible Automation Platform のログイン画面が表示されます�
 
 `Controller CLI` ではブラウザ上でサーバー上のコマンドを実行することが可能です。
 
-通常の Linux 環境のように `ls` や `hostname` コマンドを実行して、ブラウザ上でコマンドが実行できることを確認してください。
+通常の Linux 環境のように `ls -alF` や `hostname` コマンドを実行して、ブラウザ上でコマンドが実行できることを確認してください。
 
 > Note: コマンド実行できない、何も表示されない場合はお使いのNW環境で WebSocket 通信が遮断されている可能性があります。
 
@@ -64,7 +66,6 @@ Red Hat Ansible Automation Platform のログイン画面が表示されます�
 ファイルを保存したら、`Controller CLI` タブへ移動し、コマンドからファイルの中身を確認してください。
 
 ```
-cd rhel
 cat test.txt
 ```
 
