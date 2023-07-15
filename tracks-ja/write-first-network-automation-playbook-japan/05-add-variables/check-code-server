@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -euxo pipefail
+
+if [ ! -f /home/rhel/banner.yml ]; then
+    fail-message "No file was found at /home/rhel/banner.yml"
+fi
+
+if [ ! -f /home/rhel/banner_vars.yml ]; then
+    fail-message "No file was found at /home/rhel/banner_vars.yml"
+fi

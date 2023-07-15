@@ -1,0 +1,20 @@
+#!/bin/bash
+
+tee /home/rhel/banner.yml << EOF
+---
+- name: Setup management Cisco IOSXE router config
+  hosts: routers
+  gather_facts: no
+
+  tasks:
+
+    - name: Add banner IOSXE
+      cisco.ios.ios_banner:
+        text: "First banner with Ansible"
+        banner: "login"
+        state: present
+EOF
+
+sudo chown rhel:rhel /home/rhel/banner.yml
+
+

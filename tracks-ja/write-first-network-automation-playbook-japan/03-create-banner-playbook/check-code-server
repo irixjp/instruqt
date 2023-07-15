@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -euxo pipefail
+
+if [ ! -f /home/rhel/banner.yml ]; then
+    fail-message "No file was found at /home/rhel/banner.yml"
+fi
+
+if ! grep "ios_banner" /home/rhel/banner.yml; then
+    fail-message "The banner.yml playbook doesn't contain the ios_banner module"
+fi

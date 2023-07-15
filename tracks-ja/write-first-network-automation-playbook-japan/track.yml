@@ -1,0 +1,41 @@
+slug: write-first-network-automation-playbook-japan
+id: tuqn0s3ljfwf
+title: 'ネットワーク自動化基礎: 初めての Playbook 作成と実行'
+teaser: Ciscoルーターとスイッチにバナーを設定するための最初のプレイブックを作成します。
+description: |-
+  ネットワーク自動化をナビゲートする： 最初のプレイブックの作成と実行
+
+  - **Lab Objective： ルーターバナーを設定するためのPlaybookを作成することで、Ansibleの基本を学ぶ**
+
+  あなたは ACME 社の一員で、新しい会社を買収しました！合併の一環として、あなたは設定を標準化する必要があります。最初のタスクは、すべてのバナーをACME標準に更新することです。
+  今日は、Cisco IOSXEルータに基本的なコンフィグレーションコマンドを送信するための基礎から始めます。
+
+  この演習では、例としてCisco CSRルータに新しいログインバナーを設定するためのシンプルなAnsible playbookを作成する手順を説明します。あなたは今何をしますか？:
+
+  * [cisco.ios.config モジュール](https://docs.ansible.com/ansible/latest/collections/cisco/ios/ios_config_module.html) を使用して、Ansible Playbook を構築します。
+  * Ansible モジュールのパラメータの使い方を理解します。
+  * 冪等性とAnsibleモジュールがどのように冪等性になり得るかを試して理解します。
+
+  Ansibleに関する詳しい情報は [Ansible.com](https://www.ansible.com/) を参照してください。
+
+  [**Ansible Automation Platformを今すぐ試す！**](https://red.ht/try_ansible)
+icon: https://github.com/network-automation/networking-icons/blob/master/switches/switch_red_small.png?raw=true
+level: intermediate
+tags:
+- network
+- ansible
+- beginner
+- gettingstarted
+owner: redhat
+developers:
+- dmendoza@redhat.com
+- tnakajim@redhat.com
+show_timer: true
+skipping_enabled: true
+idle_timeout: 600
+timelimit: 1200
+lab_config:
+  overlay: false
+  width: 33
+  position: right
+checksum: "17466993736414381480"

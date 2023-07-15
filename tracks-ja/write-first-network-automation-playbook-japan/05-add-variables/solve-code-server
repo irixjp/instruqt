@@ -1,0 +1,27 @@
+#!/bin/bash
+tee /home/rhel/banner_vars.yml << EOF
+---
+net_banner: "Segundo banner"
+net_type: "login"
+EOF
+
+tee /home/rhel/banner.yml << EOF
+---
+- name: Setup management Cisco IOSXE router config
+  hosts: routers
+  gather_facts: no
+
+  vars_files:
+    - banner_vars.yml
+
+  tasks:
+
+    - name: Add banner IOSXE
+      cisco.ios.ios_banner:
+        text: "{{ net_banner | default(None) }}"
+        banner: "{{ net_type | default('login') }}"
+        state: present
+EOF
+
+sudo chown rhel:rhel /home/rhel/banner.yml
+sudo chown rhel:rhel /home/rhel/banner_vars.yml

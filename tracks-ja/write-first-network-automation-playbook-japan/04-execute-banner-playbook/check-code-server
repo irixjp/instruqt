@@ -1,0 +1,26 @@
+#!/bin/bash
+
+tee /home/rhel/check_challenge_3.yml << EOF
+---
+- name: Setup management Cisco IOSXE router config
+  hosts: routers
+  gather_facts: no
+
+  tasks:
+
+    - name: Add banner IOSXE
+      cisco.ios.ios_banner:
+        text: "First banner with Ansible"
+        banner: "login"
+        state: present
+EOF
+
+sudo chown rhel:rhel /home/rhel/check_challenge_3.yml
+
+su - rhel -c 'ansible-navigator run /home/rhel/check_challenge_3.yml --mode stdout'
+
+if [ $? -eq 0 ]; then
+    echo OK
+else
+    /usr/bin/fail-message "banner configuration was not applied - please try again or use SKIP"
+fi
