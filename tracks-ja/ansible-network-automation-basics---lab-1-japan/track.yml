@@ -1,0 +1,30 @@
+slug: ansible-network-automation-basics---lab-1-japan
+id: uj6toxuyxhlj
+title: ネットワーク自動化の基本： 最初のプレイブック
+teaser: ansible-navigator を使用したネットワーク自動化のための Red Hat Ansible Automation Platform の基礎を学びます。
+description: |-
+  # Ansible ネットワークオートメーションの基本
+
+  この実習の目的は、Ansible Automation を使用して Cisco CSR ルータの設定を更新することです。この実習では、Ansible Playbook は作成せず、提供されている既存のものを使用します。
+
+  この演習では、次のことを行います:
+
+  - 既存のAnsible Playbookの検証
+  - ansible-navigator コマンドを使用して、コマンドラインで Ansible Playbook を実行する。
+  - チェックモード (`--check` パラメータ)
+  - verboseモード（--verbose`または-vパラメータ）
+icon: https://github.com/network-automation/networking-icons/blob/master/switches/switch_red_small.png?raw=true
+level: beginner
+tags:
+- network
+- ansible
+owner: redhat
+developers:
+- seanc@redhat.com
+- tnakajim@redhat.com
+skipping_enabled: true
+lab_config:
+  overlay: false
+  width: 33
+  position: right
+checksum: "3813489664324634611"
