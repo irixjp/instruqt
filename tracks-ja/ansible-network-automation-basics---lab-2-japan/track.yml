@@ -1,0 +1,32 @@
+slug: ansible-network-automation-basics---lab-2-japan
+id: lj7fn66lkmpw
+title: 'ネットワーク自動化の基本: ファクト'
+teaser: Cisco IOS-XEデバイスからファクトを取得する方法について説明します。
+description: |-
+  # Ansible ネットワーク自動化の基礎 - ファクト
+
+  - **ラボの目的: ネットワークインフラでのAnsibleファクトのデモ使用**
+
+  Ansibleファクトは、リモート・ネットワーク・エレメントとの会話から得られる情報です。 Ansibleファクトは構造化されたデータ（JSON）で返されるため、操作や変更が容易です。 例えば、ネットワーク・エンジニアは、Ansibleファクトを使用し、それらをマークダウンまたはHTMLファイルにテンプレート化することで、非常に迅速に監査レポートを作成することができます。
+
+  この演習では次のことを学びます:
+
+  * Ansible Playbook をゼロから構築する。
+  * ドキュメンテーションのために `ansible-navigator :doc` を使用する。
+  * [cisco.ios.factsモジュール](https://docs.ansible.com/ansible/latest/collections/cisco/ios/ios_facts_module.html)の使用。
+  * [debugモジュール](https://docs.ansible.com/ansible/latest/modules/debug_module.html)の使用。
+icon: https://github.com/network-automation/networking-icons/blob/master/switches/switch_red_small.png?raw=true
+level: beginner
+tags:
+- network
+- ansible
+owner: redhat
+developers:
+- seanc@redhat.com
+- tnakajim@redhat.com
+skipping_enabled: true
+lab_config:
+  overlay: false
+  width: 33
+  position: right
+checksum: "12393490761516905375"
