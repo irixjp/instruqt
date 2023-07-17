@@ -1,0 +1,11 @@
+#!/bin/bash
+
+tower-cli config verify_ssl false
+tower-cli login admin --password ansible123!
+
+test1output=$(tower-cli job list -f json -J "Network-Banner" | jq '.count');
+
+if [[ "$test1output" == "0" ]]; then
+    fail-message "You have not launched the 'Network-Banner' job template, name must match exactly to pass test"
+    exit 1
+fi

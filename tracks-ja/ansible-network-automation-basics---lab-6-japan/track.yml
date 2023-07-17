@@ -1,0 +1,25 @@
+slug: ansible-network-automation-basics---lab-6-japan
+id: 7ml8who8gpmv
+title: 'ネットワーク自動化の基本: ワークフローの使用'
+teaser: Automation Controller を用いたワークフローの作成について学びます
+description: |-
+  # 目的
+
+  Automation Controller の [workflow](https://docs.ansible.com/automation-controller/latest/html/userguide/workflows.html) 機能を確認します。ワークフローは、インベントリ、プレイブック、権限を共有する、しないに関わらず、一連の異なるジョブテンプレート（またはワークフローテンプレート）を連結することができます。
+
+  この演習では、タイムスタンプ付きのバックアップを作成し、バックアップジョブが正常に完了した場合、ワークフローは同時にバナーとユーザーを構成します。いずれかのジョブテンプレートが失敗した場合、タイムスタンプ付きバックアップにリストアします。
+icon: https://github.com/network-automation/networking-icons/blob/master/switches/switch_red_small.png?raw=true
+tags:
+- network automation
+- ' cisco'
+owner: redhat
+developers:
+- seanc@redhat.com
+- victor@instruqt.com
+- tnakajim@redhat.com
+skipping_enabled: true
+lab_config:
+  overlay: false
+  width: 33
+  position: right
+checksum: "10144773152993024958"
