@@ -1,0 +1,35 @@
+slug: ansible-network-automation-basics---lab-3-japan
+id: un6je1fjf50c
+title: 'ネットワーク自動化の基本: リソースモジュール'
+teaser: ネットワーク自動化のための Red Hat Ansible Automation Platform playbook の基本を学びます。
+description: |-
+  # Ansible ネットワーク自動化の基本 - リソースモジュール
+
+
+  - **ラボの目的: ネットワークインフラでの Ansible リソースモジュールの使用方法の確認を行います**
+
+  Ansible ネットワークリソースモジュールは、さまざまなネットワークデバイスの管理方法を簡素化し、標準化します。ネットワークデバイスは、設定をネットワークサービスに適用されるセクション (インターフェイスや VLAN など) に分割します。
+
+
+  この演習では、次のことを学びます:
+
+  * Cisco IOS での SNMP の設定
+  * [cisco.ios.snmp_serverモジュール](https://docs.ansible.com/ansible/latest/collections/cisco/ios/ios_snmp_server_module.html#ansible-collections-cisco-ios-ios-snmp-server-module) を使用したAnsible Playbookの作成
+  * `state: merged` を理解する
+  * `state: gathered` を理解する
+icon: https://github.com/network-automation/networking-icons/blob/master/switches/switch_red_small.png?raw=true
+level: intermediate
+tags:
+- network
+- ansible
+- snmp
+owner: redhat
+developers:
+- seanc@redhat.com
+- tnakajim@redhat.com
+skipping_enabled: true
+lab_config:
+  overlay: false
+  width: 33
+  position: right
+checksum: "4236647090037210837"
