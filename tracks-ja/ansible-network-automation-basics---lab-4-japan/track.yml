@@ -1,0 +1,23 @@
+slug: ansible-network-automation-basics---lab-4-japan
+id: ghnhehzqlpdv
+title: 'ネットワーク自動化の基本: サーベイ'
+teaser: Cisco IOSネットワークデバイスを設定するための Automation Controller でのサーベイ作成方法について説明します。
+description: |
+  # 目的
+
+  Automation コントローラのSurvey機能を使用します。。Surveyは、'Prompt for Extra Variables' と同様に、プレイブックに追加の変数を設定しますが、ユーザーフレンドリーな質問と回答の方法で行います。また、Surveyはユーザー入力の検証を可能にします。
+icon: https://github.com/network-automation/networking-icons/blob/master/switches/switch_red_small.png?raw=true
+level: beginner
+tags:
+- network automation
+- cisco
+owner: redhat
+developers:
+- seanc@redhat.com
+- tnakajim@redhat.com
+skipping_enabled: true
+lab_config:
+  overlay: false
+  width: 33
+  position: right
+checksum: "877792580292898288"
