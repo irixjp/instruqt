@@ -23,8 +23,8 @@ icon: https://www.ansible.com/hubfs/Logo-Red_Hat-Ansible-A-Reverse-SVG.svg
 level: beginner
 tags:
 - ansible
-- infrastructure
 - gettingstarted
+- infrastructure
 owner: redhat
 developers:
 - moshah@redhat.com
@@ -39,4 +39,4 @@ lab_config:
   width: 25
   position: right
   extend_ttl: 3600
-checksum: "9497158761739486834"
+checksum: "141478016544434448"

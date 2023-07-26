@@ -95,7 +95,7 @@ Ansible Playbookは[YAMLファイル](https://yaml.org/)です。YAMLは構造�
 ステップ2 - ファクト・タスクの作成
 ===
 
-以下をプライブックに追加します:
+以下をプレイブックに追加します:
 
 ```
   tasks:

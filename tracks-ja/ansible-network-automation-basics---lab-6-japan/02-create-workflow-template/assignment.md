@@ -98,7 +98,7 @@ Automation controller にログインするには、画面上部の `Automation 
 
 3. **Add Node** ウインドが表示されます
 
-   - ノードタイプに `Job Template` を選択
+   - ノードタイプに `Job Template` を選択(デフォルト)
    - `Backup network configurations` を選択 <br><br>
 
 4. 青色の **Save** ボタンをクリック
@@ -114,7 +114,7 @@ Automation controller にログインするには、画面上部の `Automation 
 
 1. `Backup network configurations` ノードにカーソルを合わせ、+ マークをクリックします。`Add Node` ウィンドウが再び表示されます。
 
-2. **Run type** はドロップダウンメニューから **On Success** を選択してください。青い **Next** ボタンを押してください。
+2. **Run type** は **On Success** を選択してください。青い **Next** ボタンを押してください。
 
    ![picture of add node window](https://aap2.demoredhat.com/exercises/ansible_network/9-controller-workflow/images/step3_add_node.png)
 
@@ -136,20 +136,23 @@ Backup network configurations と Configure Banner の間に緑色の線があ�
 
    ![picture of two nodes in the workflow](https://aap2.demoredhat.com/exercises/ansible_network/9-controller-workflow/images/step3_final.png)
 
+6. ここで一度ビジュアライザー画面の右上の **save** をクリックし、作業途中の状態を保存しておきます。
+
+7. `Workshop Workflow` の詳細画面に戻りますので、`Visualizer` タブを選択して再度ビジュアライザーを起動して作業に戻ります。
+
+
 ステップ 4: Network-User ジョブテンプレートの追加
 ===
 
-1. `Backup network configurations`ノード（`Configure Banner`ノードではないので注意）にカーソルを合わせ、`+` のシンボルをクリックします。Add Nodeが再び表示されます。
+1. `Backup network configurations`ノード（`Network Automation - Banner`ノードではないので注意）にカーソルを合わせ、`+` のシンボルをクリックします。Add Nodeが再び表示されます。
 
-2. **Run type** はドロップダウンメニューから **On Success** を選択してください。青い**Next**ボタンを押してください。
+2. **Run type** は **On Success** を選択してください。青い**Next**ボタンを押してください。
 
 3. `Network Automation - User` ジョブテンプレートを選択します。
 
    ![picture of add node network-user](https://aap2.demoredhat.com/exercises/ansible_network/9-controller-workflow/images/step4_add_node.png)
 
-4. サーベイに記入する（デフォルトの `ansible` ユーザーを設定するようにしても構いません）
-
-5. **Next** をクリックし、その後 **Save** をクリックします。
+4. **Save** をクリックします。
 
    ![picture of workflow](https://aap2.demoredhat.com/exercises/ansible_network/9-controller-workflow/images/step4_final.png)
 
@@ -171,6 +174,8 @@ Backup network configurations と Configure Banner の間に緑色の線があ�
 4. ロールバックの日付を選択し、`Next`と`Save`をクリックする。
 
    ![picture of current workflow](https://aap2.demoredhat.com/exercises/ansible_network/9-controller-workflow/images/step5_final.png)
+
+>Note: ここで選択できるバックアップデータの日付は、最初の課題で実行したコンフィグのバックアップジョブを実行した日時です。
 
 ステップ6：コンバージド・リンクの作成
 ===

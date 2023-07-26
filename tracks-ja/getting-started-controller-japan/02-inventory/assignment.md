@@ -2,11 +2,11 @@
 slug: inventory
 id: xsapt1ff11ac
 type: challenge
-title: Create an Inventory
+title: インベントリーの作成
 teaser: Let's take inventory
 notes:
 - type: text
-  contents: "# インベントリ\n<br>\n<p align=\"center\">\n  <img width=\"700px\" src=\"https://raw.githubusercontent.com/craig-br/instruqt-tracks/devel/assets/controller/controller-inventory.png\">\n</p>\n<br>\n\nAn
+  contents: "# インベントリ\n<br>\n<p align=\"center\">\n  <img width=\"700px\" src=\"https://raw.githubusercontent.com/craig-br/instruqt-tracks/devel/assets/controller/controller-inventory.png\">\n</p>\n<br>\n\n
     [**Inventory**](https://docs.ansible.com/automation-controller/latest/html/userguide/inventories.html)
     は、ジョブを起動できるホストのコレクションです(Ansible インベントリーファイルと同様)。\n\n<style type=\"text/css\" rel=\"stylesheet\">\nh1
     {\n\ttext-align: center\n\t}\n</style>\n"

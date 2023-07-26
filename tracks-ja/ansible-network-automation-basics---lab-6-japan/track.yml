@@ -10,16 +10,18 @@ description: |-
   この演習では、タイムスタンプ付きのバックアップを作成し、バックアップジョブが正常に完了した場合、ワークフローは同時にバナーとユーザーを構成します。いずれかのジョブテンプレートが失敗した場合、タイムスタンプ付きバックアップにリストアします。
 icon: https://github.com/network-automation/networking-icons/blob/master/switches/switch_red_small.png?raw=true
 tags:
+- cisco
 - network automation
-- ' cisco'
 owner: redhat
 developers:
 - seanc@redhat.com
 - victor@instruqt.com
 - tnakajim@redhat.com
+show_timer: true
 skipping_enabled: true
+idle_timeout: 600
 lab_config:
   overlay: false
   width: 33
   position: right
-checksum: "10144773152993024958"
+checksum: "1692669368844186404"

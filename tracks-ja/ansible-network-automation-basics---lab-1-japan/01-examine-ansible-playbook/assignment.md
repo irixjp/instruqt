@@ -179,3 +179,8 @@ show running | i snmp
 snmp-server community ansible-public RO
 snmp-server community ansible-private RW
 ```
+
+ルーターから抜けるには以下を実行します。
+```
+exit
+```

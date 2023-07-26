@@ -7,18 +7,18 @@ teaser: 自動化コントローラーダッシュボードを最初に確認し
 notes:
 - type: text
   contents: "# Automation controller web interface\n<br>\n<p align=\"center\">\n  <img
-    width=\"700px\" src=\"https://raw.githubusercontent.com/craig-br/instruqt-tracks/devel/assets/controller/controller_dashboard.png\">\n</p>\n<br>\n\n**Automation
-    controller's** web インターフェイスでは、IT オーケストレーションのニーズに適した、使いやすいグラフィカルフレームワークが提供されます。\n\n<style
+    width=\"700px\" src=\"https://raw.githubusercontent.com/craig-br/instruqt-tracks/devel/assets/controller/controller_dashboard.png\">\n</p>\n<br>\n\n
+    Automation controller の web インターフェイスでは、IT オーケストレーションのニーズに適した、使いやすいグラフィカルフレームワークが提供されます。\n\n<style
     type=\"text/css\" rel=\"stylesheet\">\nh1 {\n\ttext-align: center\n\t}\n</style>"
 - type: text
   contents: "# Distinct edit and view perspectives\n<br>\n<p align=\"center\">\n  <img
-    width=\"700px\" src=\"https://raw.githubusercontent.com/craig-br/instruqt-tracks/devel/assets/controller/controller_jt.png\">\n</p>\n<br>\n\n**Automation
-    controller オブジェクトおよびコンポーネント向けに個別のビューおよび編集パースペクティブがあります。\n\n<style type=\"text/css\"
+    width=\"700px\" src=\"https://raw.githubusercontent.com/craig-br/instruqt-tracks/devel/assets/controller/controller_jt.png\">\n</p>\n<br>\n\n
+    Automation controller オブジェクトおよびコンポーネント向けに個別のビューおよび編集パースペクティブがあります。\n\n<style type=\"text/css\"
     rel=\"stylesheet\">\nh1 {\n\ttext-align: center\n\t}\n</style>"
 - type: text
   contents: "# Web interface filters\n<br>\n<p align=\"center\">\n    <img width=\"700px\"
-    src=\"https://raw.githubusercontent.com/craig-br/instruqt-tracks/devel/assets/controller/controller_filters.png\">\n\n</p>\n<br>\n\n**Automation
-    controller** では、Automator でタスクに関連のある情報を簡潔にまとめて表示するために使用できる直感的なフィルターが提供されています。\n\n<style
+    src=\"https://raw.githubusercontent.com/craig-br/instruqt-tracks/devel/assets/controller/controller_filters.png\">\n\n</p>\n<br>\n\n
+    Automation controller では、Automator でタスクに関連のある情報を簡潔にまとめて表示するために使用できる直感的なフィルターが提供されています。\n\n<style
     type=\"text/css\" rel=\"stylesheet\">\nh1 {\n\ttext-align: center\n\t}\n</style>"
 tabs:
 - title: コントローラーダッシュボード
@@ -31,6 +31,8 @@ tabs:
 difficulty: basic
 timelimit: 300
 ---
+本演習の表示される左側の Automation Controller はブラウザの設定言語によりUIの表示言語が選択されますが、演習課題が表示される（こちらのペイン）ではいくつかのサンプル画像が英語のままになっております。操作方法が変わるわけでは有りませんので、テキストとの言語の不一致については読み替えて実行してください。
+
 Automation controller ダッシュボードへようこそ。左側の画面にはログイン画面が表示されます。以下の認証情報でログインできます。
 
 * ユーザー名: `admin`

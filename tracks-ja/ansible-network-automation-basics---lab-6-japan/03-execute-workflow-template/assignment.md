@@ -40,6 +40,8 @@ Automation controller にログインするには、画面上部の `Automation 
 
 ステップ1：ワークフローの実行
 ===
+`Workshop Workflow` を実行します。テンプレートの画面から `Workshop Workflow` をクリックして、詳細画面を表示してください。
+
 
 1. 起動ボタンをクリック
 

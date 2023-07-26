@@ -71,10 +71,9 @@ ssh cisco
 show snmp
 ```
 
-以下のような出力が表示されます:
+以下のような出力が表示されます（設定されていない状態）:
 
 ```bash
-cisco# show snmp
 %SNMP agent not enabled
 ```
 
@@ -84,12 +83,6 @@ Cisco デバイスの SNMP の実行コンフィギュレーションを調べ�
 show run | s snmp
 ```
 
-以下のような出力が表示されます:
-
-```bash
-cisco#sh run | s snmp
-cisco#
-```
 ルータCLIを終了して、課題を完了します。
 
 ```

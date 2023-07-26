@@ -20,16 +20,18 @@ description: |-
 icon: https://github.com/network-automation/networking-icons/blob/master/switches/switch_red_small.png?raw=true
 level: intermediate
 tags:
-- network
-- ansible
 - snmp
+- ansible
+- network
 owner: redhat
 developers:
 - seanc@redhat.com
 - tnakajim@redhat.com
+show_timer: true
 skipping_enabled: true
+idle_timeout: 600
 lab_config:
   overlay: false
   width: 33
   position: right
-checksum: "4236647090037210837"
+checksum: "7484390301645004786"

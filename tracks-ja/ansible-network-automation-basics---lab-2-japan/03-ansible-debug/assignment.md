@@ -75,6 +75,6 @@ ansible-navigator run facts.yml --mode stdout
 要点
 ===
 
-- `ansible-navigator:doc`コマンドは、インターネットに接続しなくてもドキュメントにアクセスできるようにします。このドキュメントは、コントロール・ノード上のAnsibleのバージョンにも対応しています。
+- `ansible-navigator doc`コマンドは、インターネットに接続しなくてもドキュメントにアクセスできるようにします。このドキュメントは、コントロール・ノード上のAnsibleのバージョンにも対応しています。
 - `cisco.ios.facts`モジュールは、Cisco IOS固有の構造化データを収集します。各ネットワークプラットフォームに関連するモジュールがある。例えば、Juniper Junos には `junipernetworks.junos.facts` があり、Arista EOS には `arista.eos.facts` がある。
 - `debug`モジュールを使うと、Ansible Playbook がターミナルウィンドウに値を出力することができる。

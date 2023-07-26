@@ -72,15 +72,15 @@ password: `ansible123!`
 
    <img src="https://github.com/IPvSean/pictures_for_github/blob/master/launch_job.png?raw=true">
 
-- ジョブはすぐにバナーとタイプを設定するようユーザーに入力促します。
+- ジョブテンプレートが起動するとバナー文字列とバナータイプを入力するようユーザーに求めます。
 
-- バナーメッセージを入力してください。
+- バナー文字列には、以下のバナーメッセージを入力してください。
 
 ```
 This router was configured by Ansible
 ```
 
-- `motd` を選択
+- バナータイプには `motd` を選択してください（下記の入力サンプルでは誤って login になっていますので注意してください）
 
 - next をクリックすると、サーベイが Ansible Playbook の追加バーとして入力をどのようにレンダリングしたかを確認できます。この例では、バナーテキストは `This router was configured by Ansible` と設定されています。
 

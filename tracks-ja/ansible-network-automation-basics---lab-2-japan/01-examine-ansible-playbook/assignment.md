@@ -19,7 +19,7 @@ notes:
 
     ![picture of documentation for network automation](https://github.com/IPvSean/pictures_for_github/blob/master/network_docs.png?raw=true)
 
-    [red.ht/NetworkDocs](red.ht/NetworkDocs)
+    [red.ht/NetworkDocs](https://red.ht/NetworkDocs)
 
     Ansibleのネットワーク自動化は getting started guide に含まれています。
 - type: text
@@ -60,10 +60,12 @@ timelimit: 600
 ansible-navigator
 ```
 
-以下のように表示されます:
+インタラクティブモードは以下のように利用します
 ```
 `:doc <plugin>`
  ```
+`:` (コロン) の後にコマンド(`上記では doc`) を入力します。
+
 
 この機能を利用するには、`:doc debug` と入力して `debug` モジュールのドキュメントを表示します:
 

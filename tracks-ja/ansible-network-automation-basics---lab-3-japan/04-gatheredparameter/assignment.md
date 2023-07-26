@@ -88,7 +88,11 @@ ansible-navigator run gathered.yml --mode stdout
 
 Cisco デバイスから収集された情報が格納されたファイルを確認します。
 
-ファイルは `~/cisco_snmp.yml` というデバイス名で保存されています。
+ファイルは `~/cisco_snmp.yml` というデバイス名で保存されていますので、ターミナルから以下のコマンドを実行して内容を確認してください。
+
+```
+cat ~/cisco_snmp.yml
+```
 
 # 振り返り
 

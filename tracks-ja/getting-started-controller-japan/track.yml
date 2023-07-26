@@ -24,19 +24,20 @@ description: |-
 icon: https://raw.githubusercontent.com/craig-br/instruqt-tracks/devel/assets/icons/automation_controller.png
 level: beginner
 tags:
-- RedHat
-- Ansible
-- Ansible Automation Platform
-- ' controller'
-- ' automation controller'
+- controller
+- redhat
+- ansible
+- automation controller
+- ansible automation platform
 owner: redhat
 developers:
 - cbrandt@redhat.com
 - seanc@redhat.com
 - tnakajim@redhat.com
 show_timer: true
+idle_timeout: 600
 lab_config:
   overlay: false
   width: 33
   position: right
-checksum: "2210151509043941488"
+checksum: "1726736777505137430"

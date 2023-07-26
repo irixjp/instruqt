@@ -9,8 +9,6 @@ notes:
   contents: |-
     # さあはじめよう
 
-    これで演習でのブリーフィングは終わりです
-
     ラボのセットアップが完了したら、このウィンドウの右下にある緑のスタートボタン <img src="https://github.com/IPvSean/pictures_for_github/blob/master/start_button.png?raw=true" width="100px" align="left"> をクリックします。
 tabs:
 - title: Automation controller WebUI

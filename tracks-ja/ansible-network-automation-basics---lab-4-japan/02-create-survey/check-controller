@@ -26,7 +26,10 @@ tee /home/rhel/banner-survey.json << EOF
             "min": 0,
             "max": 1024,
             "default": "login",
-            "choices": "login\nmotd",
+            "choices": [
+                "login",
+                "motd"
+            ],
             "new_question": true
         }
     ]

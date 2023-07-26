@@ -51,7 +51,7 @@ timelimit: 600
 ステップ1 - 冪等性の検証
 ===
 
-`cisco.ios.config` モジュールは冪等です。つまり、コンフィギュレーションの変更がデバイスにプッシュされるのは、そのコンフィギュレーションがエンドホストに存在しない場合だけです。
+`cisco.ios.config` モジュールは冪等性を持ちます。つまり、コンフィギュレーションの変更がデバイスにプッシュされるのは、そのコンフィギュレーションがエンドホストに存在しない場合だけです。
 
 <table>
   <tr>
@@ -62,7 +62,7 @@ timelimit: 600
   </tr>
 </table>
 
-冪等性の概念を検証するために、プレイブックを再実行する:
+冪等性の概念を検証するために、ターミナルから以下のコマンドでプレイブックを再実行してください:
 
 ```
 ansible-navigator run playbook.yml --mode stdout
@@ -80,7 +80,7 @@ ansible-navigator run playbook.yml --mode stdout
 
 Ansible Playbookを複数回再実行すると、**ok=1**、**change=0**で、まったく同じ出力になります。
 
-他のオペレータまたはプロセスがrtr1上の既存のコンフィグレーションを削除または変更しない限り、このAnsible Playbookは、コンフィグレーションがすでに存在し、ネットワークデバイス上で正しくコンフィグレーションされていることを示すok=1を報告し続けます。
+他のオペレータまたはプロセスが cisco 上の既存のコンフィグレーションを削除または変更しない限り、このAnsible Playbookは、コンフィグレーションがすでに存在し、ネットワークデバイス上で正しくコンフィグレーションされていることを示すok=1を報告し続けます。
 
 ステップ2 - Ansible Playbookを変更する
 ===
@@ -98,7 +98,7 @@ code-serverを使って`playbook.yml`ファイルを開き、コマンドを追�
 ステップ3 - チェックモードを使用する
 ===
 
-ただし今回は、playbookを実行して変更をデバイスにプッシュするのではなく、-checkフラグと-v（verboseモード）フラグを組み合わせて実行する:
+今回は、playbookを実行して変更をデバイスにプッシュするのではなく、-checkフラグと-v（verboseモード）フラグを組み合わせて実行します:
 
 ```
 ansible-navigator run playbook.yml --mode stdout --check -v
@@ -109,7 +109,7 @@ ansible-navigator run playbook.yml --mode stdout --check -v
 ステップ4 - コンフィグが存在しないことを確認する
 ===
 
-Ansible Playbook が ansible-test コミュニティを適用していないことを確認する。cisco`にログインし、Cisco IOS-XEデバイスの実行中のコンフィグレーションを確認する。
+Ansible Playbook が ansible-test コミュニティを適用していないことを確認します。 ターミナルから `cisco` にログインし、Cisco IOS-XEデバイスの実行中のコンフィグレーションを確認してください。
 
 ```
 ssh cisco
@@ -120,6 +120,11 @@ show run | i snmp
 ```
 snmp-server community ansible-public RO
 snmp-server community ansible-private RW
+```
+
+以下のコマンドでルーターからログアウトします。
+```
+exit
 ```
 
 ステップ5 - Ansible Playbookを再実行する
@@ -134,11 +139,11 @@ ansible-navigator run playbook.yml --mode stdout
 ステップ6 - コンフィグが存在することを確認する
 ===
 
+以下のコマンドを実行してください。
+
 ```
 ssh cisco
 ```
-
-以下のコマンドを実行してください。
 
 ```
 sh run | i snmp
@@ -150,6 +155,11 @@ sh run | i snmp
 snmp-server community ansible-public RO
 snmp-server community ansible-private RW
 snmp-server community ansible-test RO
+```
+
+以下のコマンドでルーターからログアウトします。
+```
+exit
 ```
 
 
