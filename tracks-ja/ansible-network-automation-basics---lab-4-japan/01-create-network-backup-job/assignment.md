@@ -9,7 +9,7 @@ notes:
   contents: |
     # 演習 4 - Ansible Automation Platformのサーベイについて学ぶ
 
-     Automation Controller の [Survey](https://docs.ansible.com/automation-controller/latest/html/userguide/job_templates.html#surveys) 機能の使い方を確認します。サーベイでは、'Prompt for Extra Variables'と同様に、プレイブックに追加の変数を設定しますが、ユーザーフレンドリーな質問と回答の方法で設定します。サーベイは、ユーザー入力の検証を可能にします。
+     Automation Controller の [Survey](https://docs.ansible.com/automation-controller/latest/html/userguide/job_templates.html#surveys) 機能の使い方を確認します。サーベイでは、'var_prompt' と同様に、プレイブックに追加の変数を設定しますが、ユーザーフレンドリーな質問と回答の方法で設定します。サーベイは、ユーザー入力の検証を可能にします。
 
     まだプロビジョニングが開始されていない場合は、右下の緑色の開始ボタン <img src="https://github.com/IPvSean/pictures_for_github/blob/master/start_button.png?raw=true" width="100px" align="left"> をクリックしてください。
 - type: text
