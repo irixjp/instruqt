@@ -121,7 +121,7 @@ node2                      : ok=2    changed=1    unreachable=0    failed=0    s
 node3                      : ok=2    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
 ```
 
-Playbook を実行したときに `スキップ` に気付きましたか?
+Playbook を実行したときに `skipping` と出力されていることに気付きましたか?
 これは、`hosts` インベントリーファイル内の `hosts:` ラベルが `all` に設定されていても、タスクの特定のホストを対象とする条件付きの `when` ステートメントが原因です。
 
 ✅ 次の課題

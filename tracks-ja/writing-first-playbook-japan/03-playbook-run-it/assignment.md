@@ -100,16 +100,16 @@ The Apache HTTP Server is a powerful, efficient, and extensible
 web server.
 ```
 
-This uses the module (-m) `ansible.builtin.shell` with module arguments (-a) that states to run the following command `rpm -qi httpd` on `node1`.
+これはモジュール (-m) `ansible.builtin.shell` と、モジュール引数 (-a) を使って、`node1` で `rpm -qi httpd` というコマンドを実行します。
 
-The output lists the name, version and other details about the package.
+出力には、パッケージの名前、バージョン、その他の詳細が一覧表示さ れます。
 
 
 
 ☑️ タスク 3 - 動作の冪等性
 ===
 
-Ansible Playbook をもう一度実行し、出力を元の出力と比較します。タスクが `changed` から `ok` に変化し、色が `yellow` から `green` に変わることに気付くでしょう。さらに、*PLAY RECAP* も異なり、Ansible によって行われた変更を簡単に見つけることができます。
+Ansible Playbook をもう一度実行し、出力を元の出力と比較します。タスクが `changed` から `ok` に変化し、色が `黄色` から `緑色` に変わることに気付くでしょう。さらに、*PLAY RECAP* も異なり、Ansible によって行われた変更を簡単に見つけることができます。
 
 ```
 ansible-navigator run apache.yml

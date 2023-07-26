@@ -68,6 +68,8 @@ Playbook について:
 
 ```
 scp node1:/etc/httpd/conf/httpd.conf /home/rhel/ansible-files/files/.
+
+ls -l /home/rhel/ansible-files/files/
 ```
 
 ☑️ タスク 3 - httpd_conf.yml Playbook の実行
@@ -82,12 +84,11 @@ cd ansible-files
 ```
 ansible-navigator run httpd_conf.yml
 ```
-```
-```
+
 
 出力で何か気づきましたか?
 
-何も変更されていないため、Playbook が実行され、PLAY RECAP に `変更された` 行が表示されないことがわかります。
+何も変更されていないため、Playbook が実行され、PLAY RECAP に `changed` 行が表示されないことがわかります。
 
 ☑️ タスク 4 - httpd.conf ファイルの変更
 ===
@@ -109,8 +110,7 @@ Listen 8081
 ```
 ansible-navigator run httpd_conf.yml
 ```
-```
-```
+
 
 playbook を再び実行します。これで、Ansible の出力はもっと興味深いものになるはずです:
 

@@ -61,7 +61,7 @@ timelimit: 1
 ☑️ タスク 2 - loop_users.yml Playbook の実行
 ===
 
-*control* タブ内で、ディレクトリーを `ansible-files` に変更し、`loop_users.yml Playbook` を実行します。
+*control* タブ内で、ディレクトリーを `ansible-files` に変更し、`loop_users.yml` Playbook を実行します。
 
 ```
 cd ansible-files
@@ -84,11 +84,12 @@ changed: [node1] => (item=prod_user)
 PLAY RECAP *********************************************************************
 node1                      : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
-Playbook と出力の概要:
+Playbook の概要:
 
-* 名前は `ansible.builtin.user` モジュールに直接提供されません。代わりに、パラメーター名には `{{ item }}` という変数しかありません。
-* loop キーワードは、実際のユーザー名をリストします。それらは、Playbook の実際の実行中に `{{ item }}` を置き換えます。
-* 実行中、タスクは1回だけリストされますが、その下に 3 つの変更がリストされます。
+* loop キーワードは、与えられたリストの要素回数分だけモジュールを実行します。
+* リストの値は先頭から取り出されて `{{ item }}` という変数に格納されます。
+* `ansible.builtin.user` モジュールの `name`パラメーターには `{{ item }}` が指定されているので、ループのたびにリストの要素が順に格納されていることになります。
+
 
 ✅ 次の課題
 ===
