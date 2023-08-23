@@ -1,0 +1,84 @@
+#!/bin/bash
+USER=rhel
+
+tee /tmp/instruqt_mvp_2nd_setup.yml << EOF
+---
+- name: setup controller for network use cases
+  hosts: localhost
+  gather_facts: false
+  become: true
+  vars:
+    aap_host: localhost
+    aap_username: admin
+    aap_password: ansible123!
+    aap_ssl_verify: false
+
+  tasks:
+
+    - name: ensure tower/controller is online and working
+      uri:
+        url: https://{{ aap_host }}/api/v2/ping/
+        method: GET
+        user: "{{ aap_username }}"
+        password: "{{ aap_password }}"
+        validate_certs: "{{ aap_ssl_verify }}"
+        force_basic_auth: true
+      register: controller_online
+      until: controller_online is success
+      delay: 3
+      retries: 5
+
+    - name: create inventory
+      awx.awx.inventory:
+        name: "Workshop Inventory"
+        organization: "Default"
+        controller_host: "{{ aap_host }}"
+        controller_username: "{{ aap_username }}"
+        controller_password: "{{ aap_password }}"
+        validate_certs: "{{ aap_ssl_verify }}"
+      register: workshop_inventory
+      until: workshop_inventory is success
+      delay: 3
+      retries: 5
+
+    - name: Add host01 to Workshop Inventory
+      awx.awx.host:
+        name: host01
+        description: "automation target server"
+        inventory: "Workshop Inventory"
+        state: present
+        controller_host: "{{ aap_host }}"
+        controller_username: "{{ aap_username }}"
+        controller_password: "{{ aap_password }}"
+        validate_certs: "{{ aap_ssl_verify }}"
+
+    - name: Add host01 machine credential
+      awx.awx.credential:
+        name: "Host01 Credential"
+        organization: "Default"
+        credential_type: Machine
+        controller_host: "{{ aap_host }}"
+        controller_username: "{{ aap_username }}"
+        controller_password: "{{ aap_password }}"
+        validate_certs: "{{ aap_ssl_verify }}"
+        inputs:
+          username: rhel
+          ssh_key_data: "{{ lookup('file', '/home/rhel/.ssh/id_rsa') }}"
+
+    - name: Add project
+      awx.awx.project:
+        name: "Workshop Playbooks"
+        scm_url: "https://github.com/irixjp/instruqt-playbooks.git"
+        scm_type: git
+        organization: "Default"
+        scm_update_on_launch: False
+        scm_update_cache_timeout: 60
+        controller_host: "{{ aap_host }}"
+        controller_username: "{{ aap_username }}"
+        controller_password: "{{ aap_password }}"
+        validate_certs: "{{ aap_ssl_verify }}"
+EOF
+
+ansible-playbook /tmp/instruqt_mvp_2nd_setup.yml
+
+exit 0

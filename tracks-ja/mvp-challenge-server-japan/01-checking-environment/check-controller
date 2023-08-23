@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# /home/rhel ディレクトリに移動
+cd /home/rhel
+
+# 存在するファイルのリスト取得
+files="nginx_stop.yaml nginx_start.yaml get_logfile.yaml"
+
+# 各ファイルのサイズを確認
+for file in $files; do
+  if [ ! -s $file ]; then
+    echo "$file is nothing or empty"
+    exit 1
+  fi
+done

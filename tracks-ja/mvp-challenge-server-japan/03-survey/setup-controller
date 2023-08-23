@@ -1,0 +1,38 @@
+#!/bin/bash
+USER=rhel
+
+tee /tmp/aap_survey_template.yml << EOF
+---
+- name: setup controller for network use cases
+  hosts: localhost
+  gather_facts: false
+  become: true
+  vars:
+    aap_host: localhost
+    aap_username: admin
+    aap_password: ansible123!
+    aap_ssl_verify: false
+
+  tasks:
+
+    - name: Create get log template for survey
+      awx.awx.job_template:
+        name: "ログ取得（Survey）"
+        job_type: "run"
+        organization: "Default"
+        inventory: "Workshop Inventory"
+        project: "Workshop Playbooks"
+        playbook: "mvp/get_logfile_survey.yaml"
+        credentials:
+          - "Host01 Credential"
+        state: "present"
+        controller_host: "{{ aap_host }}"
+        controller_username: "{{ aap_username }}"
+        controller_password: "{{ aap_password }}"
+        validate_certs: "{{ aap_ssl_verify }}"
+
+EOF
+
+ansible-playbook /tmp/aap_survey_template.yml
+
+exit 0

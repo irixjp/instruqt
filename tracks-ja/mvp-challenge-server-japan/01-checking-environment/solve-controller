@@ -1,0 +1,40 @@
+#!/bin/bash
+USER=rhel
+
+tee /home/rhel/nginx_stop.yaml << EOF
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: stop nginx
+    ansible.builtin.service:
+      name: nginx
+      state: stopped
+EOF
+
+tee /home/rhel/nginx_start.yaml << EOF
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: start nginx
+    ansible.builtin.service:
+      name: nginx
+      state: started
+EOF
+
+tee /home/rhel/get_logfile.yaml << EOF
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: get /var/log/messages
+    ansible.builtin.shell:
+      cmd: tail -20 /var/log/messages
+    register: output
+  - name: show log file
+    ansible.builtin.debug:
+      msg: "{{ output.stdout_lines }}"
+EOF
+
+exit 0

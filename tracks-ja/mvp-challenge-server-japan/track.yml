@@ -1,0 +1,29 @@
+slug: mvp-challenge-server-japan
+id: cwaq2x4xxtto
+title: 'MVPチャレンジ: サーバー編'
+teaser: すぐに使える最小機能を実現するシンプルな Playbook を開発し、その Playbook を Ansible Automation Platform
+  を使ってセルフサービスとして展開する流れを体験します。
+description: |
+  # MVP = Minimum Viable Product への挑戦: サーバー編
+  Red Hat Ansible Automation Platform（AAP） を活用することで、シンプルに自動化を開発し、その自動化を起動するセルフサービス画面やAPIをユーザーに提供できるようになります。
+
+  本トラックでは、最小の開発で小さくても価値のある自動化を開発し、利用する AAPによるMVP開発を体験することができます。
+
+  ![ansible demo logo](https://raw.githubusercontent.com/ansible/instruqt/devel/assets/ansible-demo.png)
+icon: ""
+level: beginner
+tags:
+- ansible
+- gettingstarted
+owner: redhat
+developers:
+- tnakajim@redhat.com
+show_timer: true
+skipping_enabled: true
+idle_timeout: 600
+timelimit: 3600
+lab_config:
+  overlay: false
+  width: 33
+  position: right
+checksum: "18106428823410307564"

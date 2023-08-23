@@ -1,0 +1,69 @@
+#!/bin/bash
+USER=rhel
+
+tee /tmp/instruqt_mvp_2nd_solve.yml << EOF
+---
+- name: solve controller for 2nd step
+  hosts: localhost
+  gather_facts: false
+  become: true
+  vars:
+    aap_host: localhost
+    aap_username: admin
+    aap_password: ansible123!
+    aap_ssl_verify: false
+
+  tasks:
+
+    - name: Create get log template
+      awx.awx.job_template:
+        name: "ログ取得"
+        job_type: "run"
+        organization: "Default"
+        inventory: "Workshop Inventory"
+        project: "Workshop Playbooks"
+        playbook: "mvp/get_logfile.yaml"
+        credentials:
+          - "Host01 Credential"
+        state: "present"
+        controller_host: "{{ aap_host }}"
+        controller_username: "{{ aap_username }}"
+        controller_password: "{{ aap_password }}"
+        validate_certs: "{{ aap_ssl_verify }}"
+
+    - name: Create stopping nginx
+      awx.awx.job_template:
+        name: "サービス停止"
+        job_type: "run"
+        organization: "Default"
+        inventory: "Workshop Inventory"
+        project: "Workshop Playbooks"
+        playbook: "mvp/nginx_stop.yaml"
+        credentials:
+          - "Host01 Credential"
+        state: "present"
+        controller_host: "{{ aap_host }}"
+        controller_username: "{{ aap_username }}"
+        controller_password: "{{ aap_password }}"
+        validate_certs: "{{ aap_ssl_verify }}"
+
+    - name: Create starting nginx
+      awx.awx.job_template:
+        name: "サービス開始"
+        job_type: "run"
+        organization: "Default"
+        inventory: "Workshop Inventory"
+        project: "Workshop Playbooks"
+        playbook: "mvp/nginx_start.yaml"
+        credentials:
+          - "Host01 Credential"
+        state: "present"
+        controller_host: "{{ aap_host }}"
+        controller_username: "{{ aap_username }}"
+        controller_password: "{{ aap_password }}"
+        validate_certs: "{{ aap_ssl_verify }}"
+EOF
+
+ansible-playbook /tmp/instruqt_mvp_2nd_solve.yml
+
+exit 0
