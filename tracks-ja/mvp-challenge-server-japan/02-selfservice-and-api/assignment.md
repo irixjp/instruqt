@@ -139,15 +139,24 @@ ansible123!
 ===
 ジョブテンプレートが作成できたら、本当にサービスが停止するかを確認しながらそれぞれを実行していきます。
 
-1. `Controller CLI` から `curl http://host01/index.html` を実行し、nginx が起動していることを確認
+1. `Controller CLI` から以下のコマンドを実行して nginx が起動していることを確認
+```
+curl http://host01/index.html
+```
 
 2. `Dashboard` からジョブテンプレート「サービス停止」を実行（ロケットボタンをクリック）
 
-3. `Controller CLI` から `curl http://host01/index.html` を実行し、nginx が停止したことを確認
+3. `Controller CLI` から以下のコマンドを実行して、nginx が停止したことを確認
+```
+curl http://host01/index.html
+```
 
 4. `Dashboard` からジョブテンプレート「サービス開始」を実行（ロケットボタンをクリック）
 
-5. `Controller CLI` から `curl http://host01/index.html` を実行し、nginx が稼働していることを確認。
+5. `Controller CLI` から以下のコマンドを実行して、nginx が稼働していることを確認。
+```
+curl http://host01/index.html
+```
 
 
 ☑️ まとめ
