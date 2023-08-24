@@ -65,3 +65,7 @@ sudo dnf install -y ansible-navigator
 sudo dnf install -y ansible-lint
 sudo dnf install -y nc
 pip3.9 install yamllint
+
+which ansible-navigator
+
+exit $?

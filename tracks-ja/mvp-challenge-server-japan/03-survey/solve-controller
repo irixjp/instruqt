@@ -1,0 +1,59 @@
+#!/bin/bash
+USER=rhel
+
+tee /tmp/instruqt_mvp_3rd_survey.json << EOF
+{
+    "name": "",
+    "description": "",
+    "spec": [
+        {
+            "question_name": "ログファイルのパスを入力",
+            "required": true,
+            "type": "text",
+            "variable": "survey_input_path",
+            "min": 0,
+            "max": 1024,
+            "default": "/var/log/messages",
+            "new_question": true
+        }
+    ]
+}
+
+EOF
+
+tee /tmp/instruqt_mvp_3rd_solve.yml << EOF
+---
+- name: setup controller for network use cases
+  hosts: localhost
+  gather_facts: false
+  become: true
+  vars:
+    aap_host: localhost
+    aap_username: admin
+    aap_password: ansible123!
+    aap_ssl_verify: false
+
+  tasks:
+
+    - name: Create get log template for survey
+      awx.awx.job_template:
+        name: "ログ取得（Survey）"
+        job_type: "run"
+        organization: "Default"
+        inventory: "Workshop Inventory"
+        project: "Workshop Playbooks"
+        playbook: "mvp/get_logfile_survey.yaml"
+        credentials:
+          - "Host01 Credential"
+        survey_enabled: yes
+        survey_spec: "{{ lookup('file', '/tmp/instruqt_mvp_3rd_survey.json') }}"
+        state: "present"
+        controller_host: "{{ aap_host }}"
+        controller_username: "{{ aap_username }}"
+        controller_password: "{{ aap_password }}"
+        validate_certs: "{{ aap_ssl_verify }}"
+EOF
+
+ansible-playbook /tmp/instruqt_mvp_3rd_solve.yml
+
+exit 0

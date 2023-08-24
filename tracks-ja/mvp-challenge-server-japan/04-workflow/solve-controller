@@ -1,0 +1,67 @@
+#!/bin/bash
+USER=rhel
+
+tee /tmp/instruqt_mvp_4rd_solve.yml << EOF
+---
+- name: setup controller for network use cases
+  hosts: localhost
+  gather_facts: false
+  become: true
+  vars:
+    aap_host: localhost
+    aap_username: admin
+    aap_password: ansible123!
+    aap_ssl_verify: false
+
+  tasks:
+
+    - name: Create a workflow job template with workflow nodes in template
+      awx.awx.workflow_job_template:
+        name: "サービスの再起動＆ログの取得"
+        organization: Default
+        schema:
+          - identifier: "サービス停止"
+            unified_job_template:
+              name: "サービス停止"
+              type: job_template
+              organization:
+                name: "Default"
+            related:
+              success_nodes:
+                - identifier: "ログ取得"
+              failure_nodes: []
+              always_nodes: []
+              credentials: []
+          - identifier: "ログ取得"
+            unified_job_template:
+              name: "ログ取得"
+              type: job_template
+              organization:
+                name: "Default"
+            related:
+              success_nodes:
+                - identifier: "サービス開始"
+              failure_nodes: []
+              always_nodes: []
+              credentials: []
+          - identifier: "サービス開始"
+            unified_job_template:
+              name: "サービス開始"
+              type: job_template
+              organization:
+                name: "Default"
+            related:
+              success_nodes: []
+              failure_nodes: []
+              always_nodes: []
+              credentials: []
+        controller_host: "{{ aap_host }}"
+        controller_username: "{{ aap_username }}"
+        controller_password: "{{ aap_password }}"
+        validate_certs: "{{ aap_ssl_verify }}"
+
+EOF
+
+ansible-playbook /tmp/instruqt_mvp_4rd_solve.yml
+
+exit 0

@@ -20,10 +20,10 @@ developers:
 - tnakajim@redhat.com
 show_timer: true
 skipping_enabled: true
-idle_timeout: 600
+idle_timeout: 900
 timelimit: 3600
 lab_config:
   overlay: false
-  width: 33
+  width: 30
   position: right
-checksum: "17867883991371891086"
+checksum: "1227426341847881365"
