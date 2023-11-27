@@ -32,6 +32,7 @@ developers:
 - lgallego@redhat.com
 - tnakajim@redhat.com
 show_timer: true
+skipping_enabled: true
 idle_timeout: 600
 timelimit: 7200
 lab_config:
@@ -39,4 +40,5 @@ lab_config:
   width: 25
   position: right
   extend_ttl: 3600
-checksum: "141478016544434448"
+  loadingMessages: true
+checksum: "6292598224500542863"
