@@ -1,0 +1,62 @@
+#!/bin/bash
+#
+# Create a playbook for the user to execute
+tee /tmp/lab2c3_setup.yml << EOF
+---
+- name: Create the application deployment Job Template
+  hosts: localhost
+  gather_facts: false
+  become: true
+  vars:
+    username: admin
+    admin_password: ansible123!
+
+  tasks:
+    
+    - name: Create job templates
+      awx.awx.job_template:
+        name: "Deploy Application"
+        job_type: "run"
+        organization: "Default"
+        inventory: "AWS Inventory"
+        project: "AWS Demos Project"
+        playbook: "playbooks/lab2-deploy-application.yml"
+        credentials:
+          - "RHEL on AWS - SSH KEY"
+        survey_enabled: true
+        survey_spec:
+          name: Deploy the application SURVEY
+          description: Which applications do you want to install?
+          spec:
+          - type: multiselect
+            question_name: "Select the applications you would like to deploy (one or more)"
+            question_description: select the application
+            variable: application
+            required: true
+            default: httpd
+            choices:
+              - httpd
+              - nginx
+              - htop
+              - gdb
+          - type: multiselect
+            question_name: "Select the hosts you want to deploy the applications to (one or more)"
+            question_description: select the host
+            variable: HOSTS
+            required: true
+            default: rhel1
+            choices:
+              - rhel1
+              - rhel2
+        state: "present"
+        controller_username: "{{ username }}"
+        controller_password: "{{ admin_password }}"
+        controller_host: "https://{{ ansible_host }}"
+        validate_certs: false
+
+EOF
+
+# Execute above playbook
+ansible-playbook /tmp/lab2c3_setup.yml
+
+exit 0
