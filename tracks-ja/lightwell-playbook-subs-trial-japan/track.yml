@@ -1,0 +1,22 @@
+slug: lightwell-playbook-subs-trial-japan
+title: Lightwell Ansible Playbook 定額利用サービス体験
+teaser: A very short description of what this track is about (will be visible in the
+  track card)
+description: |-
+  The full description of the track. Markdown is accepted here.
+
+  ![ansible demo logo](https://raw.githubusercontent.com/ansible/instruqt/devel/assets/ansible-demo.png)
+icon: ""
+level: beginner
+tags:
+- gettingstarted
+owner: redhat
+developers:
+- tnakajim@redhat.com
+maintenance: true
+lab_config:
+  overlay: false
+  width: 33
+  position: right
+  feedback_recap_enabled: true
+  loadingMessages: true
