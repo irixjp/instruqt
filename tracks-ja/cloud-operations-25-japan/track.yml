@@ -1,0 +1,29 @@
+slug: cloud-operations-25-japan
+id: ae9m57jedk0z
+title: 'ハイブリッドクラウド・オートメーション: AWS クラウドオペレーション(AAP 2.5)'
+teaser: Red Hat Ansible Automation Platform を使ったクラウド運用の自動について体験しましょう。
+description: |-
+  このラボのゴールは、**Ansible Automation Platform**で、クラウドの運用作業を自動化する方法について理解することです。ここではパブリック・クラウド（AWS）に焦点を当てますが、ここでのユースケースはハイブリッド・クラウド全体に適用できるものです。
+  ![picture of lab diagram](https://github.com/IPvSean/pictures_for_github/blob/master/aws-diagram.png?raw=true)
+icon: https://github.com/network-automation/networking-icons/raw/master/multi-cloud/multicloud-red.png
+tags:
+- ansible
+- ansibleautomationplatform
+- aap
+owner: redhat
+developers:
+- hmourad@redhat.com
+- tnakajim@redhat.com
+show_timer: true
+idle_timeout: 300
+timelimit: 2700
+lab_config:
+  feedback_recap_enabled: true
+  feedback_tab_enabled: false
+  loadingMessages: true
+  override_challenge_layout: false
+  hideStopButton: false
+  default_layout: AssignmentRight
+  default_layout_sidebar_size: 33
+checksum: "16071268071975902932"
+enhanced_loading: false
