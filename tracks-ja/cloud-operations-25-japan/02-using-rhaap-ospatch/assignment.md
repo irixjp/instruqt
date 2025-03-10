@@ -58,9 +58,9 @@ enhanced_loading: null
 
 ---
 
-左のナビゲーションメニューの `Automation Execution` の下にある `Templates` リンクをクリックします。
+左のナビゲーションメニューの `Automation Execution` の下にある `テンプレート(Templates)` リンクをクリックします。
 
-- 次に`+ Create Template`をクリックし、下にスクロールして`Create job template`をクリックする。
+- 次に`+ テンプレートの作成(Create Template)`をクリックし、下にスクロールして`ジョブテンプレートの作成(Create job template)`をクリックする。
 <img src="https://github.com/HichamMourad/awsops25/blob/master/images/create_templates.png?raw=true" style="width:600px;margin-left:0px" >
 
 以下のように入力します:
@@ -68,22 +68,22 @@ enhanced_loading: null
 <table>
 <tr><th>Parameter</th><th>Value</th>
 </tr>
-<tr><td>Name</td><td>Linux Patching</td>
-<tr><td>Job Type</td><td>Check</td>
-<tr><td>Inventory</td><td>AWS Inventory</td>
-<tr><td>Project</td><td>AWS Demo Project</td>
-<tr><td>Execution Environment</td><td>Default execution environment</td>
+<tr><td>名前(Name)</td><td>Linux Patching</td>
+<tr><td>ジョブタイプ(Job Type)</td><td>Check</td>
+<tr><td>インベントリー(Inventory)</td><td>AWS Inventory</td>
+<tr><td>プロジェクト(Project)</td><td>AWS Demo Project</td>
+<tr><td>実行環境(Execution Environment)</td><td>Default execution environment</td>
 <tr><td>Playbook</td><td>playbooks/lab2-patching.yml</td>
-<tr><td>Credentials</td><td>RHEL on AWS - SSH KEY</td>
+<tr><td>認証情報(Credentials)</td><td>RHEL on AWS - SSH KEY</td>
 </table>
 
-`Credentials`については、`Select Category`ドロップダウンから`Machine`を選択する必要があります。リストの中から`RHEL on AWS - SSH KEY`を選択します。
+`認証情報(Credentials)`については、`Select Credentials`ドロップダウンから`RHEL on AWS - SSH KEY`を選択します。
 
-一番下までスクロールし、青い`Create Job Template`ボタンをクリックしてジョブテンプレートを保存します。
+一番下までスクロールし、青い`ジョブテンプレートを作成(Create Job Template)`ボタンをクリックしてジョブテンプレートを保存します。
 
-この求人テンプレートにアンケートを作成するには、`アンケート` メニューオプションをクリックします。
+このジョブテンプレートにサーベイを作成するには、`Survey` メニューオプションをクリックします。
 青い `+ Create Survey Questions` ボタンをクリックします。
-アンケートフォームに以下のフィールドを入力します:
+サーベイフォームに以下のフィールドを入力します:
 
 <table>
 <tr><th>Parameter</th><th>Value</th>
@@ -102,9 +102,9 @@ enhanced_loading: null
 Survey Disabled のダイヤルをオンにして、Surveyを有効にします。 するとテキストが`Survey Enabled`に変わります。
 <img src="https://github.com/HichamMourad/awsops25/blob/master/images/survey_toggle_short.png?raw=true" style="width:600px;margin-left:0px" >
 
-右上の`Launch template`ボタンをクリックすると、ジョブが再度起動します。
+右上の`テンプレートの起動(Launch template)`ボタンをクリックすると、ジョブが起動します。
 
-Surveyの質問に答えるように促されます。 すでに `rhel1` がデフォルト値になっていますので、`Next` をクリックして jot テンプレートの詳細を確認し、`Finish` をクリックします。
+Surveyの質問に答えるように促されます。 すでに `rhel1` がデフォルト値になっていますので、`Next` をクリックしてジョブテンプレートの詳細を確認し、`Finish` をクリックします。
 
 ジョブテンプレートの実行結果を見てください。 ジョブタイプを `Check` に設定したことを思い出してください。 見てわかるように、ジョブの出力は Linux Patching レポートを指しています。これについては次のタスクで説明します！
 

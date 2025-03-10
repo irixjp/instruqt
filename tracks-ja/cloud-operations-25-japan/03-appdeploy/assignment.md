@@ -66,16 +66,16 @@ enhanced_loading: null
 
 ---
 
-左のナビゲーションメニューの `Automation Execution` の下にある `Templates` リンクをクリックします。
+左のナビゲーションメニューの `Automation Execution` の下にある `テンプレート(Templates)` リンクをクリックします。
 `Deploy Application` ジョブテンプレートを選択して `Launch` をクリックするか、`Rocket Launcher` 🚀アイコンをクリックして起動します。
 
 デプロイするアプリケーションと、デプロイ先のLinuxホストを選択するように求められます。
 
-1. `Survey`ビュー
+1. `Survey` 画面
    * デフォルトのアプリケーションは`httpd`です。インストールするアプリケーションのリストに`nginx`を追加してください。
    * ホストについては、デフォルトの`rhel1`に`rhel2`を追加して、両方のホストにインストールできようにします。
    * `Next`をクリックします。
-2. From the `Review` view.
+2. `レビュー(Review)` 画面
    * 表示される詳細と extra vars の値を確認します。
    * 最後に `Finish` をクリックします。
 
@@ -86,16 +86,15 @@ enhanced_loading: null
 
 このタスクでは、`rhel1`と`rhel2`でアドホックコマンドを実行して、先程実行したアプリケーションデプロイメントのジョブから`nginx`がインストールされたことを確認します。
 
-In the left navigation menus on the left go to the following:  `Automation Execution`, `Infrastructure`, `Inventories`, and select `AWS Inventory`.
-左側のナビゲーションメニューから以下の項目を選択します:  `Automation Execution` → `Infrastructure`→ `Inventories` と進み、`AWS Inventory` を選択する。
+左側のナビゲーションメニューから以下の項目を選択します:  `Automation Execution` → `Infrastructure`→ `インベントリー(Inventories)` と進み、`AWS Inventory` を選択する。
 
-`Hosts` メニューをクリックし、`rhel1` と `rhel2` の横にあるチェックボックスをクリックします。
+`ホスト(Hosts)` メニューをクリックし、`rhel1` と `rhel2` の横にあるチェックボックスをクリックします。
 
 `rhel1`と`rhel2`を選択したら、`Run Command`ボタンをクリックします。
-1. `Details`ビューで、`Module`ドロップダウンから`service`を選択し、`Arguments`フィールドに`name=nginx`と入力し、`Next`をクリックします。
-2. `Execution Environment`ビューで`Default Execution Environment`を選択し、`Next`をクリックします。
-3. `Credential`ビューで`RHEL on AWS - SSH KEY`を選択し、`Next`をクリックします。
-4. `Review`ビューで`Launch`をクリックします。
+1. `詳細(Details)`ビューで、`Module`ドロップダウンから`service`を選択し、`Arguments`フィールドに`name=nginx`と入力し、`Next`をクリックします。
+2. `実行環境(Execution Environment)`ビューで`Default Execution Environment`を選択し、`Next`をクリックします。
+3. `認証情報(Credential)`ビューで`RHEL on AWS - SSH KEY`を選択し、`Next`をクリックします。
+4. `Review`ビューで`Finish`をクリックします。
 
 これには少し時間がかかります。出力にはホストがリストされ、`nginx`の詳細が表示されます。
 
